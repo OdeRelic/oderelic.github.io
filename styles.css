@@ -276,11 +276,12 @@ header {
 @media (min-width: 900px) {
   .screenshots-grid {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
 .screenshot-wrapper {
-  flex: 1;
+  flex: 1 1 400px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--glass-shadow);
@@ -288,6 +289,12 @@ header {
   transition: transform 0.4s ease;
   background: var(--card-bg);
   cursor: pointer;
+}
+
+@media (min-width: 900px) {
+  .screenshot-wrapper:first-child {
+    flex: 1 1 100%;
+  }
 }
 
 .screenshot-wrapper:hover {
